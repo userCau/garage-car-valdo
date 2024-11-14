@@ -1,0 +1,300 @@
+/* Estilos Gerais */
+@import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Righteous&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Sarala:wght@400;700&display=swap');
+
+* {
+    font-family: "Archivo", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    position: relative;
+    background-position: center;
+    background-size: cover;
+    height: 40vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+header::before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    background: 
+    linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+    url(img/interior.jpg);
+    background-position: center;
+    background-size: cover;
+    filter: blur(8px);
+    z-index: -1;
+}
+
+header h1, header p {
+    position: relative;
+    z-index: 1;
+    color: white;
+}
+
+header h1 {
+    font-size: 60px;
+    margin-bottom: 35px;
+}
+
+header p {
+    font-size: 20px;
+}
+
+.servicos {
+    background-color: rgb(0, 0, 0);
+    padding: 48px;
+}
+
+.servicos h2 {
+    font-size: 40px;
+    text-align: center;
+    color: white;
+}
+
+.srv {
+    margin-bottom: 70px;
+}
+
+.srv2 {
+    margin-top: 70px;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.cartao {
+    color: white;
+    font-weight: 600;
+    background-color: rgb(49, 48, 48);
+    width: 200px;
+    padding: 20px;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.5s ease;
+}
+
+.cartao:hover {
+    transform: scale(1.1);
+}
+
+.cartao img {
+    width: 80px;
+    margin-bottom: 10px;
+}
+
+.cartao p {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.cartao ul {
+    text-align: left;
+    line-height: 23px;
+}
+
+.sobre {
+    background-color: rgb(32, 32, 32);
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    padding: 40px;
+}
+
+.cont {
+    display: flex;
+    flex-direction: column;
+}
+
+.cont h2 {
+    font-size: 35px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.sobre p {
+    max-width: 700px;
+    font-size: 22px;
+    line-height: 28px;
+}
+
+.sobre img {
+    max-width: 350px;
+    border-radius: 7px;
+    border: 2px solid #fff;
+}
+
+.contato {
+    padding: 40px;
+    display: flex;
+    flex-direction: row;
+    color: white;
+    background-color: rgb(0, 0, 0);
+    justify-content: center;
+    gap: 40px;
+}
+
+.mapa {
+    max-width: 100%;
+    height: auto;
+}
+
+.infos {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.infos h2 {
+    font-size: 32px;
+}
+
+.infos img {
+    margin-right: 8px;
+    height: 20px;
+    filter: invert(1);
+}
+
+.infos p {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+}
+
+button {
+    color: white;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    background-color: #1a9c00;
+    width: 250px;
+    height: 80px;
+    border: none;
+    border-radius: 10px;
+    justify-content: center;
+    transition: transform 0.5s ease;
+}
+
+button:hover {
+    transform: scale(1.1);
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Media Queries para Responsividade */
+
+/* Tablets */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 40px;
+    }
+
+    header p {
+        font-size: 18px;
+    }
+
+    .servicos h2 {
+        font-size: 32px;
+    }
+
+    .cartao {
+        width: 180px;
+        height: auto;
+    }
+
+    .sobre {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .sobre p {
+        width: 90%;
+    }
+
+    .sobre img {
+        max-width: 80%;
+        margin-top: 20px;
+    }
+
+    .contato {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .mapa iframe {
+        width: 100%;
+        height: 200px;
+    }
+
+    .infos h2 {
+        text-align: center;
+    }
+}
+
+/* Smartphones */
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 30px;
+    }
+
+    header p {
+        font-size: 16px;
+    }
+
+    .servicos h2 {
+        font-size: 28px;
+    }
+
+    .container {
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+    }
+
+    .cartao {
+        width: 90%;
+        height: auto;
+    }
+
+    .sobre p {
+        font-size: 18px;
+    }
+
+    .contato {
+        padding: 20px;
+    }
+
+    .mapa iframe {
+        width: 100%;
+        height: 180px;
+    }
+
+    button {
+        width: 100%;
+        height: 60px;
+    }
+}
